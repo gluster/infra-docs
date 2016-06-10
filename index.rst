@@ -1,16 +1,14 @@
-.. infra-docs documentation master file, created by
-   sphinx-quickstart on Tue Jun  7 06:59:52 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Gluster infrastructure
+======================
 
-Welcome to infra-docs's documentation!
-======================================
+This website is meant to serve as the source of truth about gluster project's
+infrastructure. It describes our tools and general operational procedures.
 
-Contents:
 
 .. toctree::
+   tools/index
+   procedures/index
    :maxdepth: 2
-
 
 
 Indices and tables
