@@ -8,19 +8,17 @@ reviews. It is hosted on formicary.gluster.org in the RDU.
 * Current Version: 2.12.2
 * Date of Upgrade: 01-06-2016
 
-
-
 Plugins
 -------
 
-We have the following plugins installed on our instance:
+When upgrading, remember the plugin version should match the version of Gerrit.
+We have the following plugins installed on our instance (apart from the default
+ones):
 
-#todo: Add links to plugin
-#todo: Add proper todos
-
-* Github (only the oauth library, not the plugin).
-* Event log.
-* Replication.
+* `Github <https://gerrit.googlesource.com/plugins/github/+/master/README.md>`_
+  (only the oauth library, not the plugin)
+* `Events log <https://gerrit.googlesource.com/plugins/events-log/>`_
+* `Replication <https://gerrit.googlesource.com/plugins/replication/+/master/src/main/resources/Documentation/about.md>`_
 
 Replication
 -----------
@@ -28,6 +26,4 @@ Replication
 Two repositories from our instance are replicated onto Github
 
 * glusterfs
-* libafr
-
-
+* glusterfs-specs
