@@ -7,4 +7,5 @@ in our Ansible or Salt repository.
 
 .. toctree::
    gerrit
+   jenkins
    :maxdepth: 2
