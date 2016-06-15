@@ -19,5 +19,3 @@ make html
 ```
 
 And read the doc in _build/html/
-
- 
