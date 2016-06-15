@@ -9,4 +9,5 @@ in our Ansible or Salt repository.
    ansible
    gerrit
    jenkins
+   salt
    :maxdepth: 2
