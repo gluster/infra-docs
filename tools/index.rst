@@ -6,6 +6,7 @@ any quirks in our setup. The detailed configuration for each tool can be found
 in our Ansible or Salt repository.
 
 .. toctree::
+   ansible
    gerrit
    jenkins
    :maxdepth: 2
