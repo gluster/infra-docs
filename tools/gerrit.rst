@@ -26,4 +26,8 @@ Replication
 Two repositories from our instance are replicated onto Github
 
 * glusterfs
-* glusterfs-specs
+* glusterfs-
+
+
+Gerrit Backup
+-------------
