@@ -7,5 +7,6 @@ of emergencies, errors, upgrades, or other maintenance tasks.
 .. toctree::
    installation
    connect_to_ipmi_RH_DC
+   adding_a_list
    :maxdepth: 2
 
