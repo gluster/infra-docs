@@ -67,3 +67,13 @@ Then you can use the following commands to fetch and merge 1 specific PR (for ex
     git checkout master
     git cherry-pick pr_4
     git push
+
+Running ansible from a admin workstation
+----------------------------------------
+
+In order to run a command on all the servers (or a subset), you can use the following command from
+a git checkout, provided you have root access::
+
+    ansible -i hosts -l some_group -m ping
+
+You can also adjust if you want to use sudo with -u and -K.
