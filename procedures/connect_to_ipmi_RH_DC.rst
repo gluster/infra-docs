@@ -2,9 +2,13 @@ Connecting to the admin remote interface in the community cage
 ==============================================================
 
 
-So the 3 servers in the DC are pleometrosis.rht.gluster.org, haplometrosis.rht.gluster.org and
-myrmicinae.rht.gluster.org.
-Each of them is connected on the internet admin network.
+The 4 servers in the DC are:
+- pleometrosis.rht.gluster.org
+- haplometrosis.rht.gluster.org
+- myrmicinae.rht.gluster.org
+- formicary.rht.gluster.org
+
+Each of them is connected on the admin network.
 
 Here is a summary of the ip address:
 
@@ -13,6 +17,7 @@ Server        IP          Admin interface
 haplometrosis 172.24.0.11 172.24.0.1
 pleometrosis  172.24.0.12 172.24.0.2
 myrmicinae    172.24.0.13 172.24.0.3
+formicary     172.24.0.14 172.24.0.4
 ============= =========== ===============
 
 Step 1: Setting up a tunnel with ssh
@@ -32,6 +37,10 @@ If you want to connect to haplometrosis admin interface, then use this::
 If you want to connect to myrmicinae admin interface, then use this::
 
     ssh -N -L 5900:172.24.0.3:5900 -L 8080:172.24.0.3:8080 -L 8443:172.24.0.3:8443 pleometrosis.rht.gluster.org
+
+If you want to connect to formicary admin interface, then use this::
+
+    ssh -N -L 5900:172.24.0.4:5900 -L 8080:172.24.0.4:8080 -L 8443:172.24.0.4:8443 pleometrosis.rht.gluster.org
 
 Step 2: Connecting to the web interface
 ---------------------------------------
