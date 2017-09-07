@@ -47,8 +47,33 @@ apply changes right away.
 
 To push for a change, start by cloning the repository::
 
-    git clone ssh://salt-master.gluster.org/srv/git_repos/public ansible_gluster_public
+    git clone https://github.com/gluster/gluster.org_ansible_configuration.git ansible_gluster_public
+    git remote set-url --push ssh://salt-master.gluster.org/srv/git_repos/public
 
 Then modify and push to the same repository. If you are in the group `admins`,
 then you will be able to push.  If not, then you can send the patch on
 gluster-infra mailling list.
+
+Fetching a PR from github
+-------------------------
+
+If anyone opens a PR on github, you can merge it (after proper review) using the
+following process, for the PR number 4. I will assume that the repository is setup
+like as explained in the previous pragraph.
+
+Then you can use the following commands to fetch and merge 1 specific PR (for example, the PR 4)::
+
+    git fetch origin pull/4/head:pr_4
+    git checkout master
+    git cherry-pick pr_4
+    git push
+
+Running ansible from a admin workstation
+----------------------------------------
+
+In order to run a command on all the servers (or a subset), you can use the following command from
+a git checkout, provided you have root access::
+
+    ansible -i hosts -l some_group -m ping
+
+You can also adjust if you want to use sudo with -u and -K.

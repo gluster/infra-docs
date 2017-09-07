@@ -2,16 +2,16 @@ Salt
 ====
 
 Salt was the first configuration management system used by the project.
-A migration to ansible is on going at the moment (June 2016), but salt is still
-used as a transport mechanism for now
+A migration to ansible was done and completed as of September 2016 
+and used as a transport mechanism for now
 
 The main server is salt-master.gluster.org and runs salt-master on Centos
 7 with EPEL packages.
 
 It is currently hosted in Rackspace cloud.
 
-Repository with salt formula
-----------------------------
+Archives repository with salt formula
+---------------------------------------
 
 The repository with the salt formulas can be found on github:
 
@@ -21,8 +21,8 @@ Pillar information is on:
 
 https://github.com/gluster/gluster.org_salt_pillar
 
-No development is expected to occurs on that repositories, and formulas are
-being converted to ansible slowly.
+The whole repository is currently kept for historical reason,
+and shouldn't be used for anything.
 
 Integration with ansible
 ------------------------
