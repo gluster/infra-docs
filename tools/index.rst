@@ -10,4 +10,5 @@ in our Ansible or Salt repository.
    gerrit
    jenkins
    salt
+   munin
    :maxdepth: 2
