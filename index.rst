@@ -8,6 +8,7 @@ infrastructure. It describes our tools and general operational procedures.
 .. toctree::
    tools/index
    procedures/index
+   emergency
    :maxdepth: 2
 
 
