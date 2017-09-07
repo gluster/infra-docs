@@ -14,8 +14,8 @@ Infrastructure Responsibility Matrix
 ------------------------------------
 The section aims to define ownership and point of contact for issues.
 
-OSAS Sysadmin
-'''''''''''''
+Gluster Sysadmin
+''''''''''''''''
 Michael Scherer
 
 Gluster CI Engineer
@@ -35,25 +35,24 @@ Nigel Babu
    * - Build Nodes
      - Gluster CI Engineer
    * - salt-master.gluster.org
-     - OSAS Sysadmin
+     - Sysadmin
    * - supercolony.gluster.org
-     - OSAS Sysadmin
+     - Sysadmin
    * - webbuilder.gluster.org
-     - OSAS Sysadmin
+     - Sysadmin
    * - munin.gluster.org
-     - OSAS Sysadmin
+     - Sysadmin
    * - download01.gluster.org
-     - OSAS Sysadmin
+     - Sysadmin
    * - freeipa01.gluster.org
-     - OSAS Sysadmin
+     - Sysadmin
    * - syslog01.gluster.org
-     - OSAS Sysadmin
+     - Sysadmin
    * - Infra Security Issues
-     - OSAS Sysadmin and Gluster CI Engineer
+     - Sysadmin and Gluster CI Engineer
 
 **Note**: Nigel is only responsible for the Gerrit software and Jenkins
-software. The uptime, OS updates, and OS upgrades are all owned by the OSAS
-team.
+software. The uptime, OS updates, and OS upgrades are all owned by the Sysadmin team.
 
 Who to Contact for What
 -----------------------
@@ -65,17 +64,17 @@ Who to Contact for What
    * - Situation
      - Contact
    * - Gerrit/Jenkins Outage
-     - OSAS Sysadmin Team
+     - Sysadmin Team
    * - Gerrit/Jenkins Issues (not an outage)
      - Gluster CI Engineer
    * - Access to machines
-     - OSAS Sysadmin Team
+     - Sysadmin Team
    * - Access to build nodes (previously called slaves)
      - Gluster CI Engineer
    * - Infra-related build failures
      - Gluster CI Engineer
    * - Infra Security Issues
-     - OSAS Sysadmin and Gluster CI Engineer
+     - Sysadmin and Gluster CI Engineer
 
 Indices and tables
 ==================
