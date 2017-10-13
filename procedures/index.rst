@@ -8,6 +8,7 @@ of emergencies, errors, upgrades, or other maintenance tasks.
     backups
     adding_a_vm
     resize_vm_partition
+    removing_a_vm 
     installation
     connect_to_ipmi_RH_DC
     finding_vlan_in_the_cage
