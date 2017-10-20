@@ -22,25 +22,22 @@ Upon installation, make sure that the server is upgraded to the latest security
 patches. Exact syntax depend on the OS, report to the documentation of the
 system. Do not forget to reboot after.
 
-Step 3: Install salt and connect to salt-master
------------------------------------------------
+Step 3: Install the ssh keys
+----------------------------
 
-For a Centos 7 host named server.example.org, as root::
+On ansible bastion, locate the public key used by Ansible for
+deployment. It should be in ~ansible_admin/.ssh/id_rsa.pub
 
-    yum install -y epel-release
-    yum install -y salt-minion
-    service salt-minion start
-    echo master: salt-master.gluster.org >> /etc/salt/minion
-    service salt-minion restart
+Place it on the new server in /root/.ssh/authorized_keys::
 
-Then on the salt-master host, as root::
+    ssh server.example.org mkdir -p /root/.ssh
+    ssh server.example.org chmod 700 /root/.ssh
+    ssh ant-queen.int.rht.gluster.org cat ~ansible_admin/.ssh/id_rsa.pub | ssh server.example.org tee /root/.ssh/authorized_keys
 
-    salt-key -a server.example.org
-
-Test connectivity with::
+Test connectivity on the bastion with::
 
     su - ansible_admin
-    ansible all -i 'server.example.org,' -e 'ansible_connection=saltstack' -m ping
+    ansible all -i 'server.example.org,' -m ping
 
 it should answer something like this::
 
@@ -52,10 +49,10 @@ it should answer something like this::
 Then basic configuration can be deployed with::
 
     su - ansible_admin
-    ansible-playbook -i 'server.example.org,' -e 'ansible_connection=saltstack' /etc/ansible/playbooks/deploy_base.yml
+    ansible-playbook -i 'server.example.org,' /etc/ansible/playbooks/deploy_base.yml
 
-Step 4: Add it to ansible
--------------------------
+Step 4: Add it to ansible inventory
+-----------------------------------
 
 To add the server to ansible, you need to have a checkout of the ansible repo,
 report to the ansible documentation for instruction.
