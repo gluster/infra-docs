@@ -12,20 +12,13 @@ Setup
 The current setup is using a trusted server that do the deployment based on git
 commit. This is documented on `https://github.com/OSAS/ansible-role-ansible_bastion`.
 
-The trusted server, is salt-master.gluster.org, mostly for historical reasons.
-
-Salt bus usage
---------------
-
-In order to keep both salt and ansible working for the time being, ansible is
-using the salt bus to connect to server. This is done using custom code that
-can be found on `https://github.com/OSAS/ansible-role-salt_transport`.
+The trusted server is ant-queen.int.rht.gluster.org, and requires to jump from a bastion.
 
 Running a playbook or a ansible ad-hoc command
 ----------------------------------------------
 
-For historical reasons, ansible should be run with a specific user on
-salt-master.gluster.org.  The specific user is set in order to restrict usage
+For security reasons, ansible should be run with a specific user on
+ant-queen.int.rht.gluster.org.  The specific user is set in order to restrict usage
 of the ssh keys and/or salt bus access. There is work on going to let people in
 a specific unix group do all the work with sudo, but this is not finished yet.
 
@@ -48,7 +41,7 @@ apply changes right away.
 To push for a change, start by cloning the repository::
 
     git clone https://github.com/gluster/gluster.org_ansible_configuration.git ansible_gluster_public
-    git remote set-url --push ssh://salt-master.gluster.org/srv/git_repos/public
+    git remote set-url --push ssh://ant-queen.int.rht.gluster.org/srv/git_repos/public
 
 Then modify and push to the same repository. If you are in the group `admins`,
 then you will be able to push.  If not, then you can send the patch on

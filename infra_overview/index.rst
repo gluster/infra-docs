@@ -11,6 +11,5 @@ in our Ansible or Salt repository.
     planet
     gerrit
     jenkins
-    salt
     munin
     :maxdepth: 2

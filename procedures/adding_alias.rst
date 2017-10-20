@@ -9,7 +9,7 @@ Step 1: Clone the private repository
 Since we want to keep people email private, for spam and privacy reasons, 
 the list of alias are stored in a private git repository::
 
-    git clone ssh://salt-master.gluster.org/srv/git_repos/private gluster_private
+    git clone ssh://ant-queen.int.rht.gluster.org/srv/git_repos/private gluster_private
 
 Step 2: Add the alias
 =====================
