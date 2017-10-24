@@ -35,8 +35,6 @@ Nigel Babu
      - Gluster CI Engineer
    * - Build Nodes
      - Gluster CI Engineer
-   * - salt-master.gluster.org
-     - Sysadmin
    * - supercolony.gluster.org
      - Sysadmin
    * - webbuilder.gluster.org

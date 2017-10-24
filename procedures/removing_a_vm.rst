@@ -44,7 +44,7 @@ from the ssh know_hosts file on the ansible bastion.
 
 To do that, connect on the bastion as a regular user::
 
-     ssh salt-master.gluster.org
+     ssh ant-queen.int.rht.gluster.org
 
 Then use clean_ssh_public_keys.py to clean it::
 
