@@ -6,10 +6,10 @@ infrastructure. It describes our tools and general operational procedures.
 
 
 .. toctree::
-   tools/index
-   procedures/index
-   emergency
-   :maxdepth: 2
+    infra_overview/index
+    procedures/index
+    emergency
+    :maxdepth: 2
 
 Infrastructure Responsibility Matrix
 ------------------------------------
