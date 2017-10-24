@@ -6,9 +6,11 @@ any quirks in our setup. The detailed configuration for each tool can be found
 in our Ansible or Salt repository.
 
 .. toctree::
-   ansible
-   gerrit
-   jenkins
-   salt
-   munin
-   :maxdepth: 2
+    ansible
+    dns_naming
+    planet
+    gerrit
+    jenkins
+    salt
+    munin
+    :maxdepth: 2
