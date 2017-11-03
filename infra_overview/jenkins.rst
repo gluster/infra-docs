@@ -2,11 +2,12 @@ Jenkins
 =======
 
 We use Jenkins to run smoke tests, regression tests, build the release tarball,
-and to build RPMs.  It is hosted on formicary.gluster.org in the RDU.
+and to build RPMs.  It is hosted on formicary.gluster.org in the RDU. We track
+the continous updates on the LTS channel provided by Jenkins.
 
 * URL: https://build.gluster.org
-* Current Version: 1.653
-* Date of Upgrade: <unknown>
+* Current Version: 2.73.2
+* Date of Upgrade: 2017-08-29
 
 Plugins
 -------
@@ -21,13 +22,11 @@ The plugins of note are the following:
 Access
 ------
 
-There are two unix groups used to grant access to people:
+Access to Jenkins is via Github. The admins are added directly on the Jenkins
+UI based on a Github username. To add an admin, they need to first use Github
+to login to Jenkins so their user is created.
 
-* **jenkinsadmins**: This group has full access to Jenkins to manage Jenkins itself
-  and edit jobs.
-* **jenkinsusers**: This group has access to retrigger jobs and read job
-  configuration.
-
-To add a user to one of these groups, add them like this::
-
-    usermod -a -G jenkinsadmins nigelb
+Gluster release managers and some developers have write access to selected
+parts of the Jenkins user interface through the jenkins-admins team on Github.
+Unless someone is a part of the Gluster CI team, this is the higest level of
+access they will be granted.
