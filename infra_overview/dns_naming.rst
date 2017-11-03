@@ -21,18 +21,18 @@ Naming conventions
 In order to be able to use specific domain name matching with ansible, the following naming
 convention is used.
 
-For ip hosted in Rackspace cloud, we use `*.rax.gluster.org`.
+For ip hosted in Rackspace cloud, we use ``*.rax.gluster.org``.
 
-For ip in the Community cage, we use `*.rht.gluster.org`.
+For ip in the Community cage, we use ``*.rht.gluster.org``.
 
 If the ip is internal and on the VLAN 401 (Common, also called Internal), the domain
-should be `*.int.rht.gluster.org`. 
+should be ``*.int.rht.gluster.org``.
 
 If the ip is on the VLAN 400 (Management, also called Admin), the domain should be
-`*.adm.rht.gluster.org`.
+``*.adm.rht.gluster.org``.
 
-Historical servers may use `*.rack.gluster.org` and `*.cloud.gluster.org`, but newer servers
-no longer use this. We try to keep the `*.gluster.org` naming for externally visible name. 
+Historical servers may use ``*.rack.gluster.org`` and ``*.cloud.gluster.org``, but newer servers
+no longer use this. We try to keep the ``*.gluster.org`` naming for externally visible name.
 Ideally, they should only be used for CNAME on real server name. This is done to permit potential
 migration or change without impacting external users.
 

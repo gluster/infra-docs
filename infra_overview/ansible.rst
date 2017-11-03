@@ -12,7 +12,7 @@ Setup
 The current setup is using a trusted server that do the deployment based on git
 commit. The setup details are documented on https://github.com/OSAS/ansible-role-ansible_bastion.
 
-The trusted server is ant-queen.int.rht.gluster.org, and requires to jump from 
+The trusted server is ant-queen.int.rht.gluster.org, and requires to jump from
 a bastion, any of the current hypervisors would do the trick for now.
 
 Running a playbook or a ansible ad-hoc command
@@ -45,9 +45,9 @@ To push for a change, start by cloning the repository::
     cd ansible_gluster_public
     git remote set-url --push ssh://ant-queen.int.rht.gluster.org/srv/git_repos/public
 
-Then modify and push to the same repository. If you are in the group `admins`,
+Then modify and push to the same repository. If you are in the group ``admins``,
 then you will be able to push.  If not, then you can send the patch on
-gluster-infra mailling list with `git send-email`.
+gluster-infra mailling list with ``git send-email``.
 
 Fetching a PR from github
 -------------------------

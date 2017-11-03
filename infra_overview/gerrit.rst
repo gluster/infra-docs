@@ -5,8 +5,8 @@ We use Gerrit as the primary place for hosting code and conducting code
 reviews. It is hosted on formicary.gluster.org in the RDU.
 
 * URL: https://review.gluster.org
-* Current Version: 2.12.2
-* Date of Upgrade: 01-06-2016
+* Current Version: 2.13.9
+* Date of Upgrade: 2017-10-30
 
 Plugins
 -------

@@ -18,7 +18,7 @@ Please refer to the networking documentation to choose a ip, or contact a admin.
 Step 2: Creating the VM
 -----------------------
 
-In order to create the VM, we need to have:
+In order to create the VM, we need to have::
 - an IP address and network setup
 - the distribution to be used (with a version)
 - the number of CPU (optional, 1 by default)
@@ -38,11 +38,11 @@ By convention, we try to place all VM installation role in a separate role whose
 
 The bridge parameter indicated the primary network to which the VM would be connected. Due to historical reasons,
 the bridge name are not consistent on the whole set of servers, so this has been abstracted in variables defined
-in hostvars ( such as host_vars/myrmicinae.rht.gluster.org/network_interfaces.yml ). 
+in hostvars ( such as host_vars/myrmicinae.rht.gluster.org/network_interfaces.yml ).
 
-To connect to the external public facing network (VLAN 190), you need to use the bridge defined by `bridge_public`.
+To connect to the external public facing network (VLAN 190), you need to use the bridge defined by ``bridge_public``.
 
-To connect to the internal private network (VLAN 401), you need to use the bridge defined by `bridge_common`.
+To connect to the internal private network (VLAN 401), you need to use the bridge defined by ``bridge_common``.
 
 Then, a deploy playbook must be added to the ansible repository in 'playbooks/' directory, using the
 guest_virt_install role. For a example, please see playbooks/deploy_gerrit_vm.yml and the documentation of the
@@ -56,7 +56,7 @@ Step 3: Adding the VM to the inventory
 
 Once the VM is properly installed, it can be added to the inventory file (file hosts in the ansible public repository).
 
-The VM host must also be added to either 'community_cage' group, for public facing servers, or to 'int_rht_gluster_org' 
+The VM host must also be added to either 'community_cage' group, for public facing servers, or to 'int_rht_gluster_org'
 group if plugged on the internal network.
 
 Upon sending the commit to the bastion server, ansible will take care of triggering any role that requires to be deployed
