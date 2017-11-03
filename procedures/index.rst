@@ -11,6 +11,7 @@ of emergencies, errors, upgrades, or other maintenance tasks.
     removing_a_vm 
     installation
     connect_to_ipmi_RH_DC
+    adding_bridge_server
     finding_vlan_in_the_cage
     requesting-loaner
     adding_alias

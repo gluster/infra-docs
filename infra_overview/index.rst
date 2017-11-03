@@ -9,6 +9,7 @@ https://github.com/gluster/gluster.org_ansible_configuration
 .. toctree::
     ansible
     dns_naming
+    networking_in_the_cage
     planet
     gerrit
     jenkins
