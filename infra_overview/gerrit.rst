@@ -2,7 +2,7 @@ Gerrit
 ======
 
 We use Gerrit as the primary place for hosting code and conducting code
-reviews. It is hosted on formicary.gluster.org in the RDU.
+reviews. It is hosted on myrmicinae.rht.gluster.org in RDU.
 
 * URL: https://review.gluster.org
 * Current Version: 2.13.9
