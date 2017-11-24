@@ -9,6 +9,7 @@ infrastructure. It describes our tools and general operational procedures.
     infra_overview/index
     procedures/index
     emergency
+    contributing
     :maxdepth: 2
 
 Infrastructure Responsibility Matrix
