@@ -2,12 +2,12 @@ Jenkins
 =======
 
 We use Jenkins to run smoke tests, regression tests, build the release tarball,
-and to build RPMs.  It is hosted on formicary.gluster.org in the RDU. We track
+and to build RPMs.  It is hosted on myrmicinae.rht.gluster.org in RDU. We track
 the continous updates on the LTS channel provided by Jenkins.
 
 * URL: https://build.gluster.org
-* Current Version: 2.73.2
-* Date of Upgrade: 2017-08-29
+* Current Version: 2.73.3
+* Date of Upgrade: 2017-11-09
 
 Plugins
 -------
