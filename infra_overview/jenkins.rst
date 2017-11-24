@@ -30,3 +30,14 @@ Gluster release managers and some developers have write access to selected
 parts of the Jenkins user interface through the jenkins-admins team on Github.
 Unless someone is a part of the Gluster CI team, this is the higest level of
 access they will be granted.
+
+Managing Jenkins jobs
+---------------------
+
+Jenkins jobs are managed with `Jenkins Job Builder`_. Editing existing jobs or
+adding new jobs are managed by submitting patches to the repository. A Jenkins
+job called ``jenkins-update`` will run ``jenkins-jobs update`` when a patch is
+merged via Gerrit to the repo. This will not run on a direct push to master,
+however.
+
+.. _Jenkins Job Builder: https://review.gluster.org/#/admin/projects/build-jobs
