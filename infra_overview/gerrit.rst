@@ -65,5 +65,5 @@ general fix up things::
     # if things went well
     COMMIT;
 
-.. _login issues: http://lists.gluster.org/pipermail/gluster-infra/2016-June/002227.html
-.. _we changed: http://lists.gluster.org/pipermail/gluster-infra/2016-June/002239.html
+.. _login issues: https://lists.gluster.org/pipermail/gluster-infra/2016-June/002227.html
+.. _we changed: https://lists.gluster.org/pipermail/gluster-infra/2016-June/002239.html
