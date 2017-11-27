@@ -35,9 +35,10 @@ Managing Jenkins jobs
 ---------------------
 
 Jenkins jobs are managed with `Jenkins Job Builder`_. Editing existing jobs or
-adding new jobs are managed by submitting patches to the repository. A Jenkins
-job called ``jenkins-update`` will run ``jenkins-jobs update`` when a patch is
-merged via Gerrit to the repo. This will not run on a direct push to master,
-however.
+adding new jobs are managed by submitting patches to the `build-jobs`_
+repository. A Jenkins job called ``jenkins-update`` will run ``jenkins-jobs
+update`` when a patch is merged via Gerrit to the repo. This will not run on
+a direct push to master, however.
 
-.. _Jenkins Job Builder: https://review.gluster.org/#/admin/projects/build-jobs
+.. _Jenkins Job Builder: https://docs.openstack.org/infra/jenkins-job-builder/
+.. _build-jobs: https://review.gluster.org/#/admin/projects/build-jobs
