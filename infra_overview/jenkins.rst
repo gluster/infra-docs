@@ -6,8 +6,8 @@ and to build RPMs.  It is hosted on myrmicinae.rht.gluster.org in RDU. We track
 the continous updates on the LTS channel provided by Jenkins.
 
 * URL: https://build.gluster.org
-* Current Version: 2.73.3
-* Date of Upgrade: 2017-11-09
+* Current Version: 2.89.4
+* Date of Upgrade: 2018-02-15
 
 Plugins
 -------
