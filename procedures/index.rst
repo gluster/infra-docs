@@ -16,5 +16,6 @@ of emergencies, errors, upgrades, or other maintenance tasks.
     requesting-loaner
     adding_alias
     adding_a_list
+    banning_email_list
     :maxdepth: 2
 
