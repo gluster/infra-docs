@@ -14,14 +14,16 @@ infrastructure. It describes our tools and general operational procedures.
 
 Infrastructure Responsibility Matrix
 ------------------------------------
-The section aims to define ownership and point of contact for issues.
+The section aims to define ownership and point of contact for issues in
+the infrastructure team. Currently, there is 2 separates roles in order
+to let people focus on specific area.
 
-Gluster Sysadmin
-''''''''''''''''
+Sysadmin
+''''''''
 Michael Scherer
 
-Gluster CI Engineer
-'''''''''''''''''''
+CI Engineer
+'''''''''''
 Nigel Babu
 
 .. list-table:: Infrastructure Responsibility
@@ -30,29 +32,23 @@ Nigel Babu
 
    * - Product
      - Owner
-   * - Gerrit
-     - Gluster CI Engineer
-   * - Jenkins
-     - Gluster CI Engineer
+   * - Gerrit (review.gluster.org)
+     - CI Engineer
+   * - Jenkins (build.gluster.org)
+     - CI Engineer
    * - Build Nodes
-     - Gluster CI Engineer
-   * - supercolony.gluster.org
-     - Sysadmin
-   * - webbuilder.gluster.org
-     - Sysadmin
-   * - munin.gluster.org
+     - CI Engineer
+   * - Mailling lists
      - Sysadmin
    * - download01.gluster.org
-     - Sysadmin
-   * - freeipa01.gluster.org
-     - Sysadmin
-   * - syslog01.gluster.org
+     - Sysadmin   
+   * - Generic infrastructure
      - Sysadmin
    * - Infra Security Issues
-     - Sysadmin and Gluster CI Engineer
+     - Sysadmin and CI Engineer
 
-**Note**: Nigel is only responsible for the Gerrit software and Jenkins
-software. The uptime, OS updates, and OS upgrades are all owned by the Sysadmin team.
+**Note**: CI Engineer is only responsible for the Gerrit software and Jenkins
+software. The uptime, OS updates, and OS upgrades are all owned by the Sysadmin.
 
 Who to Contact for What
 -----------------------
@@ -62,19 +58,24 @@ Who to Contact for What
    :header-rows: 1
 
    * - Situation
-     - Contact
+     - Primary Contact
    * - Gerrit/Jenkins Outage
-     - Sysadmin Team
+     - Sysadmin
    * - Gerrit/Jenkins Issues (not an outage)
-     - Gluster CI Engineer
+     - CI Engineer
    * - Access to machines
-     - Sysadmin Team
+     - Sysadmin
    * - Access to build nodes (previously called slaves)
-     - Gluster CI Engineer
+     - CI Engineer
    * - Infra-related build failures
-     - Gluster CI Engineer
+     - CI Engineer
    * - Infra Security Issues
-     - Sysadmin and Gluster CI Engineer
+     - Sysadmin and CI Engineer
+
+If the primary contact is not present (days off, holidays, sick), another member of the infrastructure team can 
+take a look and solve issues. Everybody in the infra team has the same access, and if anything is missing for a member,
+this is a bug and should be fixed.
+
 
 Indices and tables
 ==================
