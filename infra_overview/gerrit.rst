@@ -5,8 +5,8 @@ We use Gerrit as the primary place for hosting code and conducting code
 reviews. It is hosted on myrmicinae.rht.gluster.org in RDU.
 
 * URL: https://review.gluster.org
-* Current Version: 2.13.9
-* Date of Upgrade: 2017-10-30
+* Current Version: 2.15.3
+* Date of Upgrade: 2018-08-10
 
 Plugins
 -------
@@ -28,6 +28,7 @@ Two repositories from our instance are replicated onto Github
 * glusterfs
 * glusterfs-specs
 
+
 Authentication Issues
 ---------------------
 
@@ -47,23 +48,8 @@ remove the entries from ``accounts_external_ids`` table. Changing the username
 entries on Gerrit does not seem to work anymore. I recommend attempting this on
 staging first and confirming all is well before trying on production.
 
-This approach removes access to the old account. The code reviews will still
-exist, but will not be owned by the "new" user. Here are the psql commands that
-general fix up things::
-
-    # search for old account
-    SELECT * FROM account_external_ids WHERE external_id LIKE '%amarts';
-    # if this throws up only one result, that's the old account
-    # Get the account_id from the previous query
-
-    # Do delete operation inside a transaction
-    BEGIN;
-    DELETE FROM account_external_ids WHERE account_id = '0000';
-    # verify it deleted only the number of rows you expected
-    # If things went badly
-    ROLLBACK;
-    # if things went well
-    COMMIT;
+Gerrit has completely switched to NoteDB for User information, so any hacks we
+had that needed PostgreSQL queries will not work anymore.
 
 .. _login issues: https://lists.gluster.org/pipermail/gluster-infra/2016-June/002227.html
 .. _we changed: https://lists.gluster.org/pipermail/gluster-infra/2016-June/002239.html
