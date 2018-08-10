@@ -8,7 +8,7 @@ of emergencies, errors, upgrades, or other maintenance tasks.
     backups
     adding_a_vm
     resize_vm_partition
-    removing_a_vm 
+    removing_a_vm
     installation
     connect_to_ipmi_RH_DC
     adding_bridge_server
@@ -17,5 +17,6 @@ of emergencies, errors, upgrades, or other maintenance tasks.
     adding_alias
     adding_a_list
     banning_email_list
+    gerrit_upgrade
     :maxdepth: 2
 
