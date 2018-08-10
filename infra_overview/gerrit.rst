@@ -32,8 +32,8 @@ Two repositories from our instance are replicated onto Github
 Authentication Issues
 ---------------------
 
-In June 2016, we upgraded Gerrit from 2.9 to 2.12.2. This caused `login
-issues`_ for a lot of users. In older versions of Gerrit, users could set
+In June 2016, we upgraded Gerrit from 2.9 to 2.12.2. This caused login
+issues for a lot of users. In older versions of Gerrit, users could set
 a username after login. In newer versions, not only did this ability go away,
 Gerrit required that your Gerrit username must match your Github username. It
 would throw an error if your Gerrit username and Github username were not the
