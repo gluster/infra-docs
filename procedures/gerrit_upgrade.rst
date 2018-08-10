@@ -38,6 +38,7 @@ Upgrade Steps
 Post Upgrade Testing
 --------------------
 The following are them minimum pieces to verify after a Gerrit upgrade:
+
 * Use the UI to browse changes. Verify diffs are visible. Problems here usually
   mean that there's an Apache configuration issue.
 * Logout and login. Any problems here usually point to a Github library
