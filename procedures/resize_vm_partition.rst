@@ -1,49 +1,39 @@
 Resizing a partition in a VM
 ============================
 
-VM installed by our automation role will use a LVM backed storage, permitting
+VMs installed by our automation role will use a LVM backed storage, permitting
 easier resizing. The process is not automated yet, partially because this is
 unfrequent enough to not warrant automation right now.
 
-Step 1: Stop the VM
--------------------
+This can be done online if LVM is used all the way, which is the case right now.
 
-We found out that we can't resizing the VM online with the current setup. So it
-has to be stop from virsh, or virt-manager.
-
-First, stop the VM (guest-vm.example.org in this case)::
-
-    halt
-
-Then, on the hypervisor (host.example.org in this case)::
-
-    virsh destroy guest-vm.example.org
-
-Step 2: Resize the logical volume
----------------------------------
+Step 1: Resize the logical volume on the hypervisor
+---------------------------------------------------
 
 On the hypervisor (host.example.org), we have to resize the logical volume.
 Each VM has 2 differents volume, one for the system, one for the data. System is supposed
 to be wiped on reinstall, and data is not. Let's assume we are resizing the data volume, 
-and adding 50 G. This operation have to happen on the hypervisor::
+and adding 50 G to a 100G disk. This operation have to happen on the hypervisor, for
+a VM called vm.example.org::
 
-    lvextend -L +50G /dev/mapper/host-guest--vm.example.org_data
+    lvextend -L 150G /dev/mapper/host-guest--vm.example.org_data
 
-Step 3: Restart the VM and resize from inside
----------------------------------------------
+Step 2: Ask to QEMU to refresh the disk
+---------------------------------------
 
-Next step is to restart the VM. This can be done with virsh::
+The operation need the size of the block device, so we need to reuse it::
 
-    virsh start guest-vm.example.org 
+    virsh blockresize vm.example.org /dev/mapper/host-guest--vm.example.org_data 150G 
 
-Then in the guest, we have to resize the physical volume. The VM 
-should see the data logical volume as /dev/vdb, and the main system as /dev/vda.
+Step 3: Resize the disk in the VM
+---------------------------------
 
-First, we have to resize the physical volume::
+First, we have to resize the physical volume on vm.example.org. The data partition is usually
+on /dev/vdb but it depend on the VM. The command pvresize is safe to run in all case::
 
-    pvresize /dev/vdb
+    pvresize -v /dev/vdb
 
-Then the volume need to be resized::
+Then the volume need to be resized, either to take 100% of the space or more, using -L::
 
     lvresize /dev/mapper/guest-data
 
@@ -51,6 +41,10 @@ And finally, grow the filesystem. This step depend on the filesystem used. For
 example, for xfs, the command would be::
 
     xfs_growth /dev/mapper/guest-data
+
+For ext4, it would be::
+
+    resize_e2fs /dev/mapper/guest-data
 
 Step 4: reflect the change in the playbook
 ------------------------------------------
