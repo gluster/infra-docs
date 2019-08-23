@@ -22,7 +22,7 @@ Michael Scherer
 
 Gluster CI Engineer
 '''''''''''''''''''
-Nigel Babu
+Deepshikha Khandelwal
 
 .. list-table:: Infrastructure Responsibility
    :widths: 50 50
@@ -36,17 +36,11 @@ Nigel Babu
      - Gluster CI Engineer
    * - Build Nodes
      - Gluster CI Engineer
-   * - supercolony.gluster.org
+   * - supercolony.rht.gluster.org
      - Sysadmin
-   * - webbuilder.gluster.org
+   * - all gluster.org not in others categories
      - Sysadmin
-   * - munin.gluster.org
-     - Sysadmin
-   * - download01.gluster.org
-     - Sysadmin
-   * - freeipa01.gluster.org
-     - Sysadmin
-   * - syslog01.gluster.org
+   * - download.rht.gluster.org
      - Sysadmin
    * - Infra Security Issues
      - Sysadmin and Gluster CI Engineer

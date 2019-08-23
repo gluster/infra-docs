@@ -16,6 +16,7 @@ of emergencies, errors, upgrades, or other maintenance tasks.
     requesting-loaner
     adding_alias
     adding_a_list
+    adding_a_admin_to_nagios
     banning_email_list
     gerrit_upgrade
     :maxdepth: 2
