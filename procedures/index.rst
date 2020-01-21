@@ -17,6 +17,7 @@ of emergencies, errors, upgrades, or other maintenance tasks.
     adding_alias
     adding_a_list
     banning_email_list
+    blocking_email_gerrit
     gerrit_upgrade
     :maxdepth: 2
 
