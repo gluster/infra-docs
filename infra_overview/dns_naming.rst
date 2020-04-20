@@ -8,10 +8,10 @@ to be changed.
 
 To modify it, someone with access to the internal dns-maps server need to send the commit.
 
-The current list of persons with access are::
+The current list of persons with access (outside RH IT) are::
 
  i. Michael Scherer
- ii. Nigel Babu
+ ii. Deepshikha Khandelwal
 
 If needed, RH IT can also do a modification and/or grant access.
 
